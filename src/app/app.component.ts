@@ -10,8 +10,8 @@ import { filter } from 'rxjs/operators';
 })
 export class AppComponent {
   title = 'ET-courses';
-
   selectedTab = 'home'; 
+  
   constructor(private router: Router, private activatedRoute: ActivatedRoute) {
     // Listen for route changes and update selectedTab based on the current route
     this.router.events.pipe(
@@ -40,5 +40,4 @@ export class AppComponent {
       this.router.navigate(['/reviews']);
     }
   }
-
 }
