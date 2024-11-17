@@ -1,0 +1,81 @@
+body {
+    background: linear-gradient(45deg, #f7f7f7, #e9ecef);
+    font-family: Arial, sans-serif;
+}
+
+/* Hero Section with Gradient Background */
+.hero {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    padding: 15px 30px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.cta-btn.secondary {
+    background-color: #28a745;
+}
+
+/* About Courses Section */
+.about-courses {
+    background-color: #6b9da8;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.course-reasons,
+.course-list,
+.testimonial-list,
+.pricing-table {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.reason,
+.course-item,
+.testimonial,
+.pricing-item {
+    width: 30%;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+}
+
+/* Popular Courses Section */
+.popular-courses {
+    background: linear-gradient(to right, #d3cce3, #e9e4f0);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+
+button {
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.cta-btn {
+    background-color: #007bff;
+    color: white;
+}
