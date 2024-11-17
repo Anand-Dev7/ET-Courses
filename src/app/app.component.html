@@ -1,22 +1,24 @@
 <mat-tab-group>
   <!-- Tab for Introduction -->
-  <mat-tab label="Introduction">
-    <h2>{{ course.name }}</h2>
-    <p>{{ course.description }}</p>
+  <mat-tab label="Home">
+    <h2>Advanced Computer Science</h2>
+    <p>This course covers advanced topics in computer science, including algorithms, data structures, and machine
+      learning.</p>
   </mat-tab>
 
   <!-- Tab for Curriculum -->
-  <mat-tab label="Curriculum">
-    <ul>
-      <li *ngFor="let item of course.curriculum">{{ item }}</li>
-    </ul>
+  <mat-tab class="header" label="Courses">
+    <app-courses></app-courses>
   </mat-tab>
 
   <!-- Tab for Instructors -->
   <mat-tab label="Instructors">
     <ul>
-      <li *ngFor="let instructor of course.instructors">
-        <strong>{{ instructor.name }}</strong> - {{ instructor.specialization }}
+      <li>
+        <strong>Dr. John Doe</strong> - Algorithms
+      </li>
+      <li>
+        <strong>Prof. Jane Smith</strong> - Machine Learning
       </li>
     </ul>
   </mat-tab>
@@ -24,8 +26,11 @@
   <!-- Tab for Reviews -->
   <mat-tab label="Reviews">
     <ul>
-      <li *ngFor="let review of course.reviews">
-        <strong>{{ review.user }}:</strong> {{ review.comment }}
+      <li>
+        <strong>Alice:</strong> Excellent course! Learned a lot.
+      </li>
+      <li>
+        <strong>Bob:</strong> Very challenging but rewarding.
       </li>
     </ul>
   </mat-tab>
