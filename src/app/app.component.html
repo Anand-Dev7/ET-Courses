@@ -1,37 +1,41 @@
-<mat-tab-group>
-  <!-- Tab for Introduction -->
-  <mat-tab label="Home">
-    <h2>Advanced Computer Science</h2>
-    <p>This course covers advanced topics in computer science, including algorithms, data structures, and machine
-      learning.</p>
-  </mat-tab>
+<div class="tabs">
+  <!-- Custom Tabs -->
+  <ul class="tab-links">
+    <li (click)="selectTab('home')" [class.active]="selectedTab === 'home'">Home</li>
+    <li (click)="selectTab('courses')" [class.active]="selectedTab === 'courses'">Courses</li>
+    <li (click)="selectTab('instructors')" [class.active]="selectedTab === 'instructors'">Instructors</li>
+    <li (click)="selectTab('reviews')" [class.active]="selectedTab === 'reviews'">Reviews</li>
+  </ul>
 
-  <!-- Tab for Curriculum -->
-  <mat-tab class="header" label="Courses">
-    <app-courses></app-courses>
-  </mat-tab>
+  <!-- Tab Content -->
+  <div class="tab-content">
+    <div *ngIf="selectedTab === 'home'">
+      <app-home-page></app-home-page>
+    </div>
+    <div *ngIf="selectedTab === 'courses'">
+      <app-courses></app-courses>
+    </div>
+    <div *ngIf="selectedTab === 'instructors'">
+      <ul>
+        <li>
+          <strong>Dr. John Doe</strong> - Algorithms
+        </li>
+        <li>
+          <strong>Prof. Jane Smith</strong> - Machine Learning
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="selectedTab === 'reviews'">
+      <ul>
+        <li>
+          <strong>Alice:</strong> Excellent course! Learned a lot.
+        </li>
+        <li>
+          <strong>Bob:</strong> Very challenging but rewarding.
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-  <!-- Tab for Instructors -->
-  <mat-tab label="Instructors">
-    <ul>
-      <li>
-        <strong>Dr. John Doe</strong> - Algorithms
-      </li>
-      <li>
-        <strong>Prof. Jane Smith</strong> - Machine Learning
-      </li>
-    </ul>
-  </mat-tab>
-
-  <!-- Tab for Reviews -->
-  <mat-tab label="Reviews">
-    <ul>
-      <li>
-        <strong>Alice:</strong> Excellent course! Learned a lot.
-      </li>
-      <li>
-        <strong>Bob:</strong> Very challenging but rewarding.
-      </li>
-    </ul>
-  </mat-tab>
-</mat-tab-group>
+<router-outlet></router-outlet>
