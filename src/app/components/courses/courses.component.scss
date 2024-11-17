@@ -1,0 +1,51 @@
+.main {
+    display: flex;
+    background-color: #002329f2;
+
+    .cards {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 15px;
+
+        .courses {
+            flex-grow: 2;
+            margin: 15px;
+            width: 340px;
+            height: 300px;
+            border-radius: 5px;
+            color: #fff;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-content: center;
+            background-color: #b5b0b033;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s ease;
+
+            &:hover {
+                background-color: #CE7011;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+            }
+
+            h3 {
+                font-size: 24px;
+            }
+
+            ul {
+                list-style-type: disc;
+                padding: 0;
+                margin: 0;
+            }
+
+            li {
+                margin: 10px 0;
+                font-size: 1.1em;
+            }
+        }
+
+
+    }
+
+}
